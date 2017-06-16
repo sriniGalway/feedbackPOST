@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Emocial Form Srini</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- load bootstrap provided by maxcdn -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!-- load jquery via google cdn -->
+	<script src="form-validation.js"></script> <!--validating the form values--> 
+	<script src="posttoform.js"></script> <!-- load the post to form javascript file on submit button event-->
+</head>
+<body onload="document.processfeedback.name.focus();">  
+<div class="col-sm-6 col-sm-offset-3">
+ <h1>Processing the Feedback Form</h1>
+    <form name="processfeedback" method="POST" onSubmit="return formValidation();">
+	<!-- NAME -->
+        <div id="name-group" class="form-group">
+        <p><label for="name">First Name:</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="John"></p>
+	</div>
+	
+	<div id="name-group" class="form-group">
+        <p><label for="last_name">Last Name:</label>
+        <input type="text" class="form-control" name="last_name" id="lname" placeholder="Doe"></p>
+	</div>
+	
+	<div id="email-group" class="form-group">
+	<p><label for="email_address">Email Address:</label>
+        <input type="text" class="form-control" name="email_address" id="email" placeholder="ab@yopmail.com"></p>
+	</div>
+	
+	<div id="phone-group" class="form-group">
+	<p><label for="phone_number">Phone Number:</label>
+        <input type="text" class="form-control" name="phone_number" id="phone" placeholder="023803102"></p>
+	</div>
+
+	<div id="feedback-group" class="form-group">
+	<p><label for="feedback">Feedback:</label>
+        <input type="text" class="form-control" name="feedback" id="feedback" placeholder="Hello world!"></p>
+	</div>
+	<button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
+	<!--input type="submit" name="submit" value="Submit" />
+    </form>
+</div>
+</body>
+</html>
